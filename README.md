@@ -69,6 +69,8 @@ The following assumptions were made where the problem specification was ambiguou
 
 6. **Material compatibility is defined by grade and quality specification (Qspec)**: A plate can only be assigned to a slab if both grade and Qspec match exactly. Customer-specific restrictions can be added as additional compatibility constraints using the same pattern.
 
+7. **Customer Specific Restrictions**: No further assumptions were made apart from steel grade and quality specification. Given the code modularity, this can be easily added to the data then implemented as additional constraints in the MILP model.
+
 ---
 
 ## Data Modelling
@@ -259,15 +261,10 @@ A JSON response containing the full logger output as a list of lines:
 
 ### Running the API
 
+From terminal:
+
 ```python
-import uvicorn
-import nest_asyncio
-
-nest_asyncio.apply()
-
-config = uvicorn.Config(app, host="127.0.0.1", port=8000)
-server = uvicorn.Server(config)
-await server.serve()
+uvicorn api:app --host 127.0.0.1 --port 8000
 ```
 
 ---

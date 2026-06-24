@@ -11,7 +11,7 @@ This system automates that planning process using a Mixed Integer Linear Program
 ## Setup & Installation
 
 1. Clone the repository:
-git clone https://github.com/yourusername/slab-allocator.git
+git clone https://github.com/mabougam/slab-allocator.git
 cd slab-allocator
 
 2. Create and activate a virtual environment:
@@ -153,8 +153,9 @@ minimise:
 ```
 
 Where:
-- `penalty = 1000`: large penalty ensuring the solver strongly prefers fulfilling orders
-- `reward = 50`: reward per plate assigned, ensuring the solver prefers assigning `fulfill=False` plates rather than leaving them unallocated
+- `penalty`: large penalty ensuring the solver strongly prefers fulfilling orders
+- `reward`: reward per plate assigned, ensuring the solver prefers assigning `fulfill=False` plates rather than leaving them unallocated
+- both parameters are derived from the inventory data to avoid hard coded constants.
 
 The three terms are ordered so that: fulfilling a `fulfill=True` order (1000) outweighs any waste savings, and assigning a plate (50) outweighs marginal waste differences. This has been implemented to avoid trivial solutions common in MILP problems. For example, a model can consider not assigning any slabs to plates as a quick way to achieve the minimum waste.
 

@@ -157,7 +157,7 @@ Where:
 - `reward`: reward per plate assigned, ensuring the solver prefers assigning `fulfill=False` plates rather than leaving them unallocated
 - both parameters are derived from the inventory data to avoid hard coded constants.
 
-The three terms are ordered so that: fulfilling a `fulfill=True` order (1000) outweighs any waste savings, and assigning a plate (50) outweighs marginal waste differences. This has been implemented to avoid trivial solutions common in MILP problems. For example, a model can consider not assigning any slabs to plates as a quick way to achieve the minimum waste.
+The three terms are ordered so that: fulfilling a `fulfill=True` order outweighs any waste savings, and assigning a plate outweighs marginal waste differences. This has been implemented to avoid trivial solutions common in MILP problems. For example, a model can consider not assigning any slabs to plates as a quick way to achieve the minimum waste.
 
 ### Diagnostic Messaging
 

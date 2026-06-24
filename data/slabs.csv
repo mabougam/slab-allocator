@@ -1,0 +1,7 @@
+﻿Slab,Length,Grade,Qspec,Status
+S1,10,A,X,reserved
+S2,9,A,X,available
+S3,6,B,X,available
+S4,7,C,X,available
+S5,5,A,Y,available
+S6,5,A,Y,available

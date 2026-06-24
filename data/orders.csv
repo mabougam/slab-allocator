@@ -1,0 +1,9 @@
+﻿Order,Plate,Length,Grade,Qspec,Fulfill_Together
+O1,P1,5,A,X,FALSE
+O2,P2,3,A,X,TRUE
+O2,P3,4,B,X,TRUE
+O3,P4,3,C,X,FALSE
+O3,P5,5,C,X,FALSE
+O4,P6,4,A,Y,TRUE
+O5,P7,3,D,X,TRUE
+O5,P8,2.5,A,Y,TRUE

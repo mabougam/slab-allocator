@@ -264,7 +264,7 @@ A JSON response containing the full logger output as a list of lines:
 From terminal:
 
 ```python
-uvicorn api:app --host 127.0.0.1 --port 8000
+uvicorn API:app --host 127.0.0.1 --port 8000
 ```
 
 ---
